@@ -37,5 +37,8 @@
     name: nginx
     state: absent
 
-- name: Download Frontend Content
-  ansible.builtin.shell: /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zipt
+- name: Download and extract zip file
+  ansible.builtin.unarchive:
+    src: /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes
