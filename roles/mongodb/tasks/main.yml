@@ -24,7 +24,7 @@
 
 - name: Install Mongodb
   ansible.builtin.yum:
-    name: Mongodb
+    name: Mongodb-org
     state: installed
 
 - name: Restart MongoDB
