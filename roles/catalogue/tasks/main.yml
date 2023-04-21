@@ -45,9 +45,9 @@
 
 - name: Load Schema
   community.mongodb.mongodb._shell:
-    login_host: mongodb-dev.manishag.online
-    file: "/app/schema/catalogue.js"
-    idempotent: yes
+     login_host: mongodb-dev.manishag.online
+     file: "/app/schema/catalogue.js"
+     idempotent: yes
 
 
 
