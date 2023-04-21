@@ -32,5 +32,8 @@
     name: nginx
     state: installed
 
-
+- name: Romeve old content
+  ansible.builtin.yum:
+    name: nginx
+    state: absent
 
