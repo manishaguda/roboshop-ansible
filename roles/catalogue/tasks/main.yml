@@ -10,21 +10,21 @@
   ansible.builtin.user:
     name: roboshop
 
-- name:  downloaded App content
-  ansible.builtin.unarchive:
-    src: https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
-    dest: /app
-    remote_src: yes
-
 - name: Romeve old app content
   ansible.builtin.file:
     path: /app
     state: absent
 
-- name: Extract App Content
+- name: Create App Directory
   ansible.builtin.file:
     path: /app
     state: directory
+
+- name:  downloaded App content
+  ansible.builtin.unarchive:
+    src: https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
+    dest: /app
+    remote_src: yes
 
 - name: Install NodJS Dependencies
   community.general.npm:
@@ -33,12 +33,20 @@
 
 - name: Copy SystemD File
   ansible.builtin.copy:
-      src: catalogue.service
-      dest: /etc/systemd/system/catalogue.service
+    src: catalogue.service
+    dest: /etc/systemd/system/catalogue.service
 
 - name: Start Catalogue Service
   ansible.builtin.systemd:
-     name: catalogue
-     daemon_reload: yes
-     enabled: yes
-     state: restarted
+    name: catalogue
+    daemon_reload: yes
+    enabled: yes
+    state: restarted
+
+
+
+
+
+
+
+
