@@ -31,15 +31,14 @@
     path: /app
     state: latest
 
-- name: COpy SystemD File
-    ansible.builtin.copy:
+- name: Copy SystemD File
+  ansible.builtin.copy:
       src: catalogue.service
       dest: /etc/systemd/system/catalogue.service
 
 - name: Start Catalogue Service
   ansible.builtin.systemd:
-    state: started
-    name: catalogue
-    enabled: yes
-    daemon_reload: yes
-    state: restarted
+     name: catalogue
+     daemon_reload: yes
+     enabled: yes
+     state: restarted
