@@ -39,6 +39,6 @@
 
 - name: Download and extract zip file
   ansible.builtin.unarchive:
-    src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+    src: /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
     dest: /tmp/frontend.zip
     remote_src: yes
