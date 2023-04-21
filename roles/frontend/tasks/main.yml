@@ -32,8 +32,5 @@
     name: nginx
     state: installed
 
-- name: remove old content
-  ansible.builtin.yum:
-    name: /usr/share/nginx/html/
-    state: absent
+
 
