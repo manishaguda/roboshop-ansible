@@ -27,7 +27,7 @@
 #print_head " Restart Nginx"
 #systemctl restart nginx &>>${LOG}
 #
-- name: install nginx
+- name: Install nginx
   ansible.builtin.yum:
     name: nginx
     state: installed
