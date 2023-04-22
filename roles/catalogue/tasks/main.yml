@@ -54,13 +54,12 @@
     name: mongodb-org-shell
     state: installed
 
--  name: Load Schema
-   community.mongodb.mongodb_shell:
-     login_host: mongodb-dev.manishag.online
-     file: "/app/schema/catalogue.js"
-     idempotent: yes
 
-
+- name: Load Schema
+  community.mongodb.mongodb_shell:
+    login_host: mongodb-dev.manishag.online
+    file: "/app/schema/{{component}}.js"
+    idempotent: yes
 
 
 
