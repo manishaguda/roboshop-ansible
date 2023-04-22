@@ -44,10 +44,7 @@
     state: restarted
 
 - name: Load Schema
-  community.mongodb.mongodb_shell:
-    login_host: mongodb-dev.manishag.online
-    file: "/app/schema/catalogue.js"
-    idempotent: yes
+  ansible.builtin.shell: mongo --host mongodb-dev.manishag.online < "/app/schema/{{component}}.js"
 
 
 
