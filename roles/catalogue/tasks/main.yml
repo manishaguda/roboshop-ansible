@@ -20,7 +20,7 @@
     path: /app
     state: directory
 
-- name:  downloaded App content
+- name:  downloaded  catalogue App content
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
     dest: /app
@@ -42,18 +42,6 @@
     daemon_reload: yes
     enabled: yes
     state: restarted
-
-- name: Copy MongoDB Yum Repo file
-  ansible.builtin.copy:
-    src: mongodb.repo
-    dest: /etc/yum.repos.d/mongodb.repo
-
-
-- name: Install MongoDB Server
-  ansible.builtin.yum:
-    name: mongodb-org-shell
-    state: installed
-
 
 - name: Load Schema
   ansible.builtin.shell: mongo --host mongodb-dev.manishag.online < "/app/schema/{{component}}.js"
