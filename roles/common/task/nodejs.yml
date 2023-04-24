@@ -60,5 +60,5 @@
 #    file: "/app/schema/{{component}}.js"
 #    idempotent: yes
 
-- name: Load Schema
-  ansible.builtin.shell: mongo --host mongodb-dev.manishag.online < "/app/schema/{{component}}.js"
+#- name: Load Schema
+# ansible.builtin.shell: mongo --host mongodb-dev.manishag.online < "/app/schema/{{component}}.js"
