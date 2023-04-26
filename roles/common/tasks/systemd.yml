@@ -9,3 +9,6 @@
     daemon_reload: yes
     enabled: yes
     state: restarted
+
+- name: Systemd Setup
+  ansible.builtin.include_tasks: "Systemd.yml"
