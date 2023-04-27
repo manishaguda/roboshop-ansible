@@ -13,8 +13,8 @@
 
 - name: Download python Dependencies
   community.general.pip:
-    requirement: /app/requirement.txt
-    exucutable: pip3.6
+    requirements: /app/requirements.txt
+    executable: pip3.6
 
 - name: Systemd Setup
   ansible.builtin.include_tasks: "systemd.yml"
