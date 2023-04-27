@@ -1,8 +1,8 @@
 - name: Configure Yum Repos
   ansible.builtiin.shell:
-      loop:
-        - https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh
-        - https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh
+  loop:
+    - https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh
+    - https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh
 
 - name: Install  Erlang & RabbitMQ
   ansible.builtin.yum:
