@@ -12,7 +12,7 @@
 
 
 - name: Download python Dependencies
-  community.general.pip:
+  ansible.builtin.pip:
     requirements: /app/requirements.txt
     executable: pip3.6
 
