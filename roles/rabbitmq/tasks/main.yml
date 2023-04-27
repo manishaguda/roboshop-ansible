@@ -1,4 +1,4 @@
-- name: Configure Yum Repos
+- name: Configure  Repos
   ansible.builtiin.shell:
     name:
       loop:
