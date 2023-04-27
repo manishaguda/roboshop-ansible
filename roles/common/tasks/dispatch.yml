@@ -1,0 +1,16 @@
+- name: Install Maven
+  ansible.builtin.yum:
+    name: maven
+    state: installed
+
+- name:  Build A Package
+  ansible.builtin.shell: mvn clean package ; mv target/{{component}}-1.0.jar {{component}}.jar
+  args:
+    chdir: /app
+
+- name: Copy App File To App Location
+  ansible.builtin.template:
+    src: "mv target/${component}-1.0.jar"
+    dest: ${component}.jar
+
+
