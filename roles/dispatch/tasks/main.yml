@@ -1,7 +1,7 @@
-- name: Import Maven
+- name: Import Java
   ansible.builtin.import_role:
     name: common
-    tasks_from: maven
+    tasks_from: java
 
 
 
