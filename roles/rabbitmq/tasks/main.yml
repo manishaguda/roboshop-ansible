@@ -1,5 +1,5 @@
 - name: Configure Yum Repos
-  ansible.builtiin.shell: curl -s {{ item }} | bash
+  ansible.builtin.shell: curl -s {{ item }} | bash
   loop:
     - https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh
     - https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh
