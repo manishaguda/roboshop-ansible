@@ -18,7 +18,7 @@
 #    src: "mv target/${component}-1.0.jar"
 #   dest: ${component}.jar
 
-- name:  Downloade GoLang Dependencies
+- name:  Download GoLang Dependencies
   ansible.builtin.package:
     name: golang
     path: /app
