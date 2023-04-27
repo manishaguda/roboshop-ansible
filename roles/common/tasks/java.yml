@@ -1,5 +1,5 @@
 
-- name: Install Maven
+- name: Install GoLang
   ansible.builtin.yum:
     name:  maven
     state: installed
@@ -20,7 +20,7 @@
 
 - name:  Downloaded  Dependencies
   ansible.builtin.package:
-    name: maven
+    name: golang
     path: /app
     state: latest
 
