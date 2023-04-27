@@ -8,16 +8,6 @@
   ansible.builtin.include_tasks: "app-prereq.yml"
 
 
-#- name: Maven Build
-#  ansible.builtin.shell: mvn clean package
-#  args:
-#    chdir: /app
-
-#- name: Copy App File To App Location
-#  ansible.builtin.template:
-#    src: "mv target/${component}-1.0.jar"
-#   dest: ${component}.jar
-
 - name:  Download GoLang Dependencies
   ansible.builtin.package:
     name: golang
