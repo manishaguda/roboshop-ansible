@@ -13,11 +13,16 @@
 #  args:
 #    chdir: /app
 
-- name: Copy App File To App Location
-  ansible.builtin.template:
-    src: "mv target/${component}-1.0.jar"
-    dest: ${component}.jar
+#- name: Copy App File To App Location
+#  ansible.builtin.template:
+#    src: "mv target/${component}-1.0.jar"
+#   dest: ${component}.jar
 
+- name:  Downloaded  Dependencies
+  ansible.builtin.package:
+    name: maven
+    path: /app
+    state: latest
 
 - name: Systemd Setup
   ansible.builtin.include_tasks: "systemd.yml"
