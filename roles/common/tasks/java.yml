@@ -8,10 +8,10 @@
   ansible.builtin.include_tasks: "app-prereq.yml"
 
 
-- name: Maven Build
-  ansible.builtin.shell: mvn clean package
-  args:
-    chdir: /app
+#- name: Maven Build
+#  ansible.builtin.shell: mvn clean package
+#  args:
+#    chdir: /app
 
 - name: Copy App File To App Location
   ansible.builtin.template:
