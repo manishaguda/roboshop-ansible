@@ -34,7 +34,7 @@
 
         ### PASSWORDS SHOULD NEVER BE KEPT IN THESE REPOS, THOSE SHOULD BE CREATED MANUALLY, BUT FOR LAB PURPOSE IAM CREATING HERE
 - name: Create Secrets
-   community.aws.aws_ssm_parameter_store:
+  community.aws.aws_ssm_parameter_store:
    name: "{{ item.name }}"
    value: "{{ item.value }}"
    region: us-east-1
