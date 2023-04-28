@@ -2,8 +2,8 @@
 Description = Cart Service
 [Service]
 User=roboshop
-Environment=REDIS_HOST=redis-dev.manishag.online
-Environment=CATALOGUE_HOST=catalogue-dev.manishag.online
+Environment=REDIS_HOST="{{ lookup('aws_ssm', "{{ENV}}.{{component}}.REDIS_HOST", region='us-east-1' ) }}"
+Environment=CATALOGUE_HOST="{{ lookup('aws_ssm', "{{ENV}}.{{component}}.CATALOGUE_HOST", region='us-east-1' ) }}"
 Environment=CATALOGUE_PORT=8080
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=cart
