@@ -17,7 +17,7 @@
         - {name: "dev.frontend.USER_URL", value: "http://user-dev.manishag.online:8080/" }
         - {name: "dev.frontend.CART_URL", value: "http://cart-dev.manishag.online:8080/" }
         - {name: "dev.frontend.SHIPPING_URL", value: "http://shipping-dev.manishag.online:8080/" }
-        - {name: "dev.payment.CART_HOST", value: "http://cart-dev.manishag.online:8080/" }
+        - {name: "dev.frontend.PAYMENT_URL", value: "http://payment-dev.manishag.online:8080/" }
         - {name: "dev.payment.CART_PORT", value: "8080" }
         - {name: "dev.payment.USER_HOST", value: "http://user-dev.manishag.online:8080/" }
         - {name: "dev.payment.USER_URL", value: "8080" }
@@ -29,6 +29,7 @@
         - {name: "dev.user.MONGO_HOST", value: "true" }
         - {name: "dev.user.REDIS_HOST", value: "redis-dev.manishag.online" }
         - {name: "dev.user.MONGO_URL", value: "mongodb://mongodb-dev.manishag.online:27017/users" }
+
 
         ### PASSWORDS SHOULD NEVER BE KEPT IN THESE REPOS, THOSE SHOULD BE CREATED MANUALLY, BUT FOR LAB PURPOSE IAM CREATING HERE
     - name: Create Secrets
