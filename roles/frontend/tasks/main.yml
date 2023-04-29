@@ -1,34 +1,21 @@
-- name: Install Nginx
-  ansible.builtin.yum:
-    name: nginx
-    state: installed
-
-- name: Remove old HTTP Documents
+- name: Romeve old HTTP Documents
   ansible.builtin.file:
-    path: /usr/share/nginx/html
+    path: /usr/share/nginx/html/
     state: absent
 
-- name: Create HTTP Document Directory
+- name: Create a HTTP document directory
   ansible.builtin.file:
-    path: /usr/share/nginx/html
+    path: /usr/share/nginx/html/
     state: directory
 
-- name: Download frontend App content
+- name:  downloaded frontend content
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
     dest: /usr/share/nginx/html
     remote_src: yes
 
-- name: Download {{component}} App content
-  ansible.builtin.unarchive:
-    src: http://{{nexus_user}}:{{nexus_pass}}@172.31.1.57:8081/repository/{{component}}/{{component}}-{{app_version}}.zip
-    dest: /usr/share/nginx/html
-    remote_src: yes
-  vars:
-    nexus_user: "{{ lookup('aws_ssm', 'nexus.user', region='us-east-1' ) }}"
-    nexus_pass: "{{ lookup('aws_ssm', 'nexus.pass', region='us-east-1' ) }}
-
-
-
-
+- name: Copy RoboShop config file to nginx
+  ansible.builtin.template:
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
 
