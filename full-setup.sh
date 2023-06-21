@@ -3,3 +3,4 @@ for component in frontend cart catalogue user shipping payment redis mongodb mys
   ansible-playbook -i ${component}.manishag.online, roboshop.yml -e ansible_user=centos -e ansible_password=DevOps321 -e ROLE_NAME=#{component} -e env=dev
 
  done
+
