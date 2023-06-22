@@ -28,5 +28,5 @@
     state: present
     tags: administrator
   vars:
-    roboshop_rabbitmq_passwords: "{{ lookup('aws_ssm', '{{env}}.{{component}}.AMQP_PASS', region='us-east-1' ) }}"
+    roboshop_rabbitmq_password: "{{ lookup('aws_ssm', '{{env}}.{{component}}.AMQP_PASS', region='us-east-1' ) }}"
 
