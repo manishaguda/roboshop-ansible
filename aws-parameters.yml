@@ -19,8 +19,8 @@
         - {name: "dev.frontend.SHIPPING_URL", value: "http://shipping-dev.manishag.online:8080/" }
         - {name: "dev.frontend.PAYMENT_URL", value: "http://payment-dev.manishag.online:8080/" }
         - {name: "dev.payment.CART_PORT", value: "8080" }
-        - {name: "dev.payment.USER_HOST", value: "http://user-dev.manishag.online:8080/" }
-        - {name: "dev.payment.USER_URL", value: "8080" }
+        - {name: "dev.payment.USER_URL", value: "http://user-dev.manishag.online:8080/" }
+        - {name: "dev.payment.USER_PORT", value: "8080" }
         - {name: "dev.payment.AMQP_HOST", value: "rabbitmq-dev.manishag.online" }
         - {name: "dev.payment.AMQP_USER", value: "roboshop" }
         - {name: "dev.shipping.CART_ENDPOINT", value: "cart-dev.manishag.online:8080" }
