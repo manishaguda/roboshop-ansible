@@ -26,7 +26,7 @@
         - {name: "dev.shipping.CART_ENDPOINT", value: "cart-dev.manishag.online:8080" }
         - {name: "dev.shipping.DB_HOST", value: "mysql-dev.manishag.online" }
         - {name: "dev.shipping.CART_HOST", value: "dev.manishag.online:8080" }
-        - {name: "dev.user.MONGO_HOST", value: "true" }
+        - {name: "dev.user.MONGO", value: "true" }
         - {name: "dev.user.REDIS_HOST", value: "redis-dev.manishag.online" }
         - {name: "dev.user.MONGO_URL", value: "mongodb://mongodb-dev.manishag.online:27017/users" }
 
