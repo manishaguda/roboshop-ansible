@@ -20,7 +20,7 @@
     - /etc/redis.conf
     - /etc/redis/redis.conf
 
-- name: Start Redis Service
+- name: Start Redis
   ansible.builtin.systemd:
      name: redis
      state: restarted
